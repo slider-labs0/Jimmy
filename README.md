@@ -2,7 +2,7 @@
 
 <p align="left">
   <a href="https://www.youtube.com/@YOUR_CHANNEL"><img src="https://img.shields.io/badge/Channel-FF0000?style=for-the-badge&logo=youtube&logoColor=white" alt="Channel"></a>
-  <a href="https://github.com/sponsors/mapache-cleff"><img src="https://img.shields.io/badge/Sponsor-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor"></a>
+  <a href="https://github.com/sponsors/slider-labs0"><img src="https://img.shields.io/badge/Sponsor-EA4AAA?style=for-the-badge&logo=githubsponsors&logoColor=white" alt="Sponsor"></a>
   <a href="https://YOUR_WEBSITE.com"><img src="https://img.shields.io/badge/Website-0A66C2?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"></a>
 </p>
 
