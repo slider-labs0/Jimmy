@@ -1,0 +1,167 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1160 1500" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+    <marker id="arrowR" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#c0392b"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1160" height="1500" fill="#fbfbfa"/>
+  <text x="580" y="42" text-anchor="middle" font-size="26" font-weight="700" fill="#222">Mycelium Bio-Hybrid — Signal Chain</text>
+  <text x="580" y="68" text-anchor="middle" font-size="15" fill="#777">READ: electrodes → AD620 → ADS1115 → Pi    ·    WRITE: Pi → MCP4725 → dish (optional stim)</text>
+
+  <!-- Faraday enclosure -->
+  <rect x="30" y="90" width="800" height="700" rx="16" fill="#eef3f7" stroke="#5b7d99" stroke-width="2" stroke-dasharray="9 6"/>
+  <text x="50" y="116" font-size="15" font-weight="700" fill="#5b7d99">GROUNDED FARADAY ENCLOSURE  (+ humidity chamber)</text>
+  <text x="50" y="136" font-size="12.5" fill="#7591a6">Pi stays OUTSIDE this box — it's a noise source</text>
+
+  <!-- Petri dish -->
+  <ellipse cx="430" cy="215" rx="185" ry="78" fill="#f3ece0" stroke="#b09b76" stroke-width="2.5"/>
+  <text x="430" y="180" text-anchor="middle" font-size="15" font-weight="700" fill="#6b5b3e">Petri dish — colonized mycelium</text>
+  <circle cx="345" cy="230" r="8" fill="#2d6fb3"/><text x="345" y="257" text-anchor="middle" font-size="12.5" fill="#2d6fb3" font-weight="700">+S</text>
+  <circle cx="430" cy="230" r="8" fill="#2d6fb3"/><text x="430" y="257" text-anchor="middle" font-size="12.5" fill="#2d6fb3" font-weight="700">−S</text>
+  <circle cx="515" cy="230" r="8" fill="#333"/><text x="515" y="257" text-anchor="middle" font-size="12.5" fill="#333" font-weight="700">ref → GND</text>
+  <circle cx="590" cy="200" r="8" fill="#d35400"/><text x="606" y="196" font-size="12.5" fill="#d35400" font-weight="700">STIM</text><text x="606" y="211" font-size="10.5" fill="#c46a2a">return via GND</text>
+
+  <!-- shielded cable: grey jacket = shielded -->
+  <path d="M345,238 C345,300 350,300 355,360" stroke="#8b969d" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M430,238 C430,300 425,300 420,360" stroke="#8b969d" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M515,238 C515,300 495,300 485,360" stroke="#8b969d" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M345,238 C345,300 350,300 355,360" stroke="#2d6fb3" stroke-width="2.5" fill="none"/>
+  <path d="M430,238 C430,300 425,300 420,360" stroke="#2d6fb3" stroke-width="2.5" fill="none"/>
+  <path d="M515,238 C515,300 495,300 485,360" stroke="#333" stroke-width="2.5" fill="none"/>
+  <rect x="240" y="300" width="98" height="22" rx="11" fill="#6b767d"/><text x="289" y="315" text-anchor="middle" font-size="11.5" font-weight="700" fill="#fff">SHIELDED</text>
+  <rect x="560" y="300" width="240" height="52" rx="8" fill="#fff" stroke="#b8c4cc"/>
+  <text x="570" y="320" font-size="12.5" fill="#555">SHORT shielded 2-core + braid.</text>
+  <text x="570" y="338" font-size="12.5" fill="#555">Braid → GND, <tspan font-weight="700">amp end only.</tspan></text>
+
+  <!-- AD620 board -->
+  <rect x="150" y="360" width="560" height="380" rx="12" fill="#2f6ea5" stroke="#1f4f78" stroke-width="2"/>
+  <text x="430" y="392" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">AD620 module  (XY-FD)</text>
+
+  <!-- J1 input row -->
+  <text x="180" y="425" font-size="13" font-weight="700" fill="#cfe3f5">J1 — INPUT SIDE  (solder wires direct, no header)</text>
+  <g font-size="13" font-weight="700">
+    <rect x="180" y="435" width="90" height="34" rx="6" fill="#fff"/><text x="225" y="457" text-anchor="middle" fill="#2d6fb3">+S</text>
+    <rect x="280" y="435" width="90" height="34" rx="6" fill="#fff"/><text x="325" y="457" text-anchor="middle" fill="#2d6fb3">−S</text>
+    <rect x="380" y="435" width="90" height="34" rx="6" fill="#fff"/><text x="425" y="457" text-anchor="middle" fill="#333">GND</text>
+    <rect x="480" y="435" width="110" height="34" rx="6" fill="#fff"/><text x="535" y="457" text-anchor="middle" fill="#c0392b">VCC</text>
+  </g>
+  <text x="535" y="492" text-anchor="middle" font-size="11.5" fill="#ffd9d0">← 5 V (Pi pin 2, or 9 V batt)</text>
+
+  <!-- pots -->
+  <circle cx="300" cy="560" r="34" fill="#3a78ad" stroke="#fff" stroke-width="2"/>
+  <text x="300" y="556" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">W103</text>
+  <text x="300" y="574" text-anchor="middle" font-size="11" fill="#cfe3f5">offset</text>
+  <circle cx="430" cy="560" r="34" fill="#3a78ad" stroke="#fff" stroke-width="2"/>
+  <text x="430" y="556" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">W104</text>
+  <text x="430" y="574" text-anchor="middle" font-size="11" fill="#cfe3f5">gain</text>
+  <text x="560" y="556" font-size="12" fill="#cfe3f5">offset → baseline ~1.6 V</text>
+  <text x="560" y="574" font-size="12" fill="#cfe3f5">(keep positive!)</text>
+
+  <!-- J3 output row -->
+  <text x="180" y="650" font-size="13" font-weight="700" fill="#cfe3f5">J3 — OUTPUT SIDE</text>
+  <g font-size="13" font-weight="700">
+    <rect x="180" y="660" width="90" height="34" rx="6" fill="#fff"/><text x="225" y="682" text-anchor="middle" fill="#333">GND</text>
+    <rect x="280" y="660" width="100" height="34" rx="6" fill="#fff"/><text x="330" y="682" text-anchor="middle" fill="#1a8a4a">Vout</text>
+    <rect x="390" y="660" width="90" height="34" rx="6" fill="#fff"/><text x="435" y="682" text-anchor="middle" fill="#333">GND</text>
+    <rect x="490" y="660" width="100" height="34" rx="6" fill="#ffe3de" stroke="#c0392b" stroke-width="2"/><text x="540" y="682" text-anchor="middle" fill="#c0392b">V−</text>
+  </g>
+  <text x="540" y="720" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">✕ LEAVE OPEN — grounding kills the board</text>
+
+  <!-- Vout -> resistor -> ADS -->
+  <path d="M330,694 L330,835" stroke="#1a8a4a" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <rect x="292" y="748" width="76" height="30" rx="5" fill="#fff" stroke="#1a8a4a"/>
+  <text x="330" y="768" text-anchor="middle" font-size="12" font-weight="700" fill="#1a8a4a">10 kΩ</text>
+  <path d="M225,694 L225,835" stroke="#333" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <text x="205" y="770" text-anchor="end" font-size="11.5" fill="#555">GND</text>
+
+  <!-- ADS1115 -->
+  <rect x="150" y="840" width="560" height="150" rx="12" fill="#7a3fb0" stroke="#552a80" stroke-width="2"/>
+  <text x="430" y="872" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">ADS1115 ADC</text>
+  <g font-size="12.5" font-weight="700">
+    <rect x="180" y="895" width="80" height="32" rx="6" fill="#fff"/><text x="220" y="916" text-anchor="middle" fill="#1a8a4a">A0</text>
+    <rect x="270" y="895" width="80" height="32" rx="6" fill="#fff"/><text x="310" y="916" text-anchor="middle" fill="#333">GND</text>
+    <rect x="360" y="895" width="80" height="32" rx="6" fill="#fff"/><text x="400" y="916" text-anchor="middle" fill="#e07b1a">VDD</text>
+    <rect x="450" y="895" width="80" height="32" rx="6" fill="#fff"/><text x="490" y="916" text-anchor="middle" fill="#2d6fb3">SCL</text>
+    <rect x="540" y="895" width="80" height="32" rx="6" fill="#fff"/><text x="580" y="916" text-anchor="middle" fill="#2d6fb3">SDA</text>
+  </g>
+  <text x="400" y="962" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffd7a8">VDD = 3.3 V  —  NEVER 5 V (generic board, no level shift)</text>
+  <text x="220" y="962" text-anchor="middle" font-size="11.5" fill="#e6d5f5">ads.gain = 1</text>
+
+  <!-- ADS -> Pi lines -->
+  <path d="M310,927 L310,1120" stroke="#333" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M400,927 L400,1120" stroke="#e07b1a" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M490,927 L490,1120" stroke="#2d6fb3" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <path d="M580,927 L580,1120" stroke="#2d6fb3" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <text x="70" y="1090" font-size="13" font-weight="700" fill="#8b969d" transform="rotate(-90 70 1090)">all links below = jumper wires</text>
+
+  <!-- Raspberry Pi -->
+  <rect x="150" y="1125" width="560" height="180" rx="12" fill="#b5123e" stroke="#7d0d2b" stroke-width="2"/>
+  <text x="430" y="1157" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">Raspberry Pi 5  (outside the box)</text>
+  <g font-size="12" font-weight="700">
+    <rect x="175" y="1180" width="120" height="34" rx="6" fill="#fff"/><text x="235" y="1202" text-anchor="middle" fill="#e07b1a">3.3 V (pin 1)</text>
+    <rect x="305" y="1180" width="120" height="34" rx="6" fill="#fff"/><text x="365" y="1202" text-anchor="middle" fill="#2d6fb3">GPIO2/SDA (3)</text>
+    <rect x="435" y="1180" width="120" height="34" rx="6" fill="#fff"/><text x="495" y="1202" text-anchor="middle" fill="#2d6fb3">GPIO3/SCL (5)</text>
+    <rect x="565" y="1180" width="120" height="34" rx="6" fill="#fff"/><text x="625" y="1202" text-anchor="middle" fill="#c0392b">5 V (pin 2)</text>
+    <rect x="305" y="1225" width="120" height="34" rx="6" fill="#fff"/><text x="365" y="1247" text-anchor="middle" fill="#333">GND (pin 6)</text>
+  </g>
+  <text x="430" y="1290" text-anchor="middle" font-size="12.5" fill="#ffd4de">runs Ollama · single-ended read on A0 · low-pass 1–10 Hz</text>
+
+  <!-- 5V feed callout to AD620 VCC -->
+  <path d="M625,1180 C700,1000 720,600 590,470" stroke="#c0392b" stroke-width="2" fill="none" stroke-dasharray="6 5" marker-end="url(#arrowR)"/>
+  <text x="742" y="820" font-size="11.5" fill="#c0392b" transform="rotate(90 742 820)">5 V → AD620 VCC</text>
+
+  <!-- ===== MCP4725 stimulation path ===== -->
+  <rect x="760" y="840" width="335" height="150" rx="12" fill="#12857f" stroke="#0c5a56" stroke-width="2"/>
+  <text x="927" y="872" text-anchor="middle" font-size="18" font-weight="700" fill="#fff">MCP4725 DAC  (optional)</text>
+  <g font-size="12" font-weight="700">
+    <rect x="778" y="895" width="56" height="32" rx="6" fill="#fff"/><text x="806" y="916" text-anchor="middle" fill="#e07b1a">VDD</text>
+    <rect x="840" y="895" width="56" height="32" rx="6" fill="#fff"/><text x="868" y="916" text-anchor="middle" fill="#333">GND</text>
+    <rect x="902" y="895" width="52" height="32" rx="6" fill="#fff"/><text x="928" y="916" text-anchor="middle" fill="#2d6fb3">SCL</text>
+    <rect x="960" y="895" width="52" height="32" rx="6" fill="#fff"/><text x="986" y="916" text-anchor="middle" fill="#2d6fb3">SDA</text>
+    <rect x="1018" y="895" width="60" height="32" rx="6" fill="#fff"/><text x="1048" y="916" text-anchor="middle" fill="#d35400">OUT</text>
+  </g>
+  <text x="927" y="962" text-anchor="middle" font-size="11.5" fill="#bfeae7">addr 0x60 — shares the I²C bus, no clash with ADS 0x48</text>
+
+  <!-- shared I2C + power bus between ADS and MCP -->
+  <path d="M710,915 L760,915" stroke="#2d6fb3" stroke-width="4" fill="none"/>
+  <text x="735" y="905" text-anchor="middle" font-size="10.5" fill="#2d6fb3" font-weight="700">bus</text>
+
+  <!-- OUT -> series R -> STIM electrode -->
+  <path d="M1078,911 L1120,911 L1120,215 L596,203" stroke="#d35400" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+  <rect x="1092" y="545" width="56" height="30" rx="5" fill="#fff" stroke="#d35400"/>
+  <text x="1120" y="565" text-anchor="middle" font-size="11" font-weight="700" fill="#d35400">R</text>
+
+  <!-- stim safety callout -->
+  <rect x="885" y="518" width="210" height="74" rx="8" fill="#fff" stroke="#e2b48c"/>
+  <text x="898" y="541" font-size="12.5" font-weight="700" fill="#c0392b">Stimulation safety</text>
+  <text x="898" y="561" font-size="11.5" fill="#8a5a3a">≤ 0.5–1 V only · series R few kΩ</text>
+  <text x="898" y="579" font-size="11.5" fill="#8a5a3a">too much = electrolysis / cooks it</text>
+
+  <!-- Legend -->
+  <rect x="30" y="1330" width="1090" height="150" rx="10" fill="#fff" stroke="#ddd"/>
+  <text x="50" y="1358" font-size="14" font-weight="700" fill="#333">Legend</text>
+  <g font-size="12.5">
+    <rect x="50" y="1372" width="26" height="6" fill="#2d6fb3"/><text x="86" y="1379" fill="#444">signal / I²C</text>
+    <rect x="50" y="1396" width="26" height="6" fill="#1a8a4a"/><text x="86" y="1403" fill="#444">amplified output (Vout)</text>
+    <rect x="50" y="1420" width="26" height="6" fill="#e07b1a"/><text x="86" y="1427" fill="#444">3.3 V power</text>
+    <rect x="50" y="1444" width="26" height="6" fill="#d35400"/><text x="86" y="1451" fill="#444">stimulation (MCP → dish)</text>
+    <rect x="330" y="1372" width="26" height="6" fill="#c0392b"/><text x="366" y="1379" fill="#444">5 V power</text>
+    <rect x="330" y="1396" width="26" height="6" fill="#333"/><text x="366" y="1403" fill="#444">ground (one common GND)</text>
+    <rect x="330" y="1418" width="26" height="12" fill="#ffe3de" stroke="#c0392b"/><text x="366" y="1428" fill="#c0392b" font-weight="700">✕ do-not-connect</text>
+    <text x="620" y="1379" fill="#444" font-weight="700">4 rules that protect hardware:</text>
+    <text x="620" y="1401" fill="#444">• ADS1115 VDD = 3.3 V, not 5 V</text>
+    <text x="620" y="1421" fill="#444">• AD620 V− pin → nothing</text>
+    <text x="620" y="1441" fill="#444">• offset keeps Vout above 0 V</text>
+    <text x="620" y="1461" fill="#444">• stim ≤ 1 V + series resistor</text>
+    <line x1="330" y1="1447" x2="358" y2="1447" stroke="#8b969d" stroke-width="9"/>
+    <line x1="330" y1="1447" x2="358" y2="1447" stroke="#2d6fb3" stroke-width="3"/>
+    <text x="368" y="1451" fill="#444">shielded — electrodes → AD620 only</text>
+    <line x1="330" y1="1468" x2="358" y2="1468" stroke="#2d6fb3" stroke-width="3"/>
+    <text x="368" y="1472" fill="#444">jumper wire — every other link</text>
+  </g>
+</svg>

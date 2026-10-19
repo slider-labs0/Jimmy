@@ -19,6 +19,12 @@ the language model, does not do math, and does not "think." The mushroom produce
 a real electrical signal. That signal is turned into a few numbers that bias the
 model. The relationship is influence, not computation.
 
+## Circuit map
+
+![Circuit map](docs/circuit-map.svg)
+
+Full wiring tables are in `docs/tutorial.md`; the AD620 pinout is in `docs/materials.md`.
+
 ## Results
 
 All numbers below are measured, not estimated. Scripts and raw summaries are in
@@ -54,6 +60,7 @@ substrate does not.
 .
 ├── README.md
 ├── docs/
+│   ├── circuit-map.svg       wiring diagram
 │   ├── materials.md          full bill of materials
 │   ├── tutorial.md           step-by-step build and run
 │   └── troubleshooting.md    every bug hit and its fix
