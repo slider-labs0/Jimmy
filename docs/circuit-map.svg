@@ -20,10 +20,10 @@
   <!-- Petri dish -->
   <ellipse cx="430" cy="215" rx="185" ry="78" fill="#f3ece0" stroke="#b09b76" stroke-width="2.5"/>
   <text x="430" y="180" text-anchor="middle" font-size="15" font-weight="700" fill="#6b5b3e">Petri dish — colonized mycelium</text>
-  <circle cx="345" cy="230" r="8" fill="#2d6fb3"/><text x="345" y="257" text-anchor="middle" font-size="12.5" fill="#2d6fb3" font-weight="700">+S</text>
-  <circle cx="430" cy="230" r="8" fill="#2d6fb3"/><text x="430" y="257" text-anchor="middle" font-size="12.5" fill="#2d6fb3" font-weight="700">−S</text>
-  <circle cx="515" cy="230" r="8" fill="#333"/><text x="515" y="257" text-anchor="middle" font-size="12.5" fill="#333" font-weight="700">ref → GND</text>
-  <circle cx="590" cy="200" r="8" fill="#d35400"/><text x="606" y="196" font-size="12.5" fill="#d35400" font-weight="700">STIM</text><text x="606" y="211" font-size="10.5" fill="#c46a2a">return via GND</text>
+  <circle cx="345" cy="230" r="8" fill="#2d6fb3"/><text x="331" y="235" text-anchor="end" font-size="12.5" fill="#2d6fb3" font-weight="700">+S</text>
+  <circle cx="430" cy="230" r="8" fill="#2d6fb3"/><text x="416" y="235" text-anchor="end" font-size="12.5" fill="#2d6fb3" font-weight="700">−S</text>
+  <circle cx="515" cy="230" r="8" fill="#333"/><text x="529" y="235" font-size="12.5" fill="#333" font-weight="700">ref → GND</text>
+  <circle cx="590" cy="200" r="8" fill="#d35400"/><path d="M596,194 L622,166" stroke="#d35400" stroke-width="1.2" fill="none"/><text x="626" y="158" font-size="12.5" fill="#d35400" font-weight="700">STIM electrode</text><text x="626" y="174" font-size="10.5" fill="#c46a2a">returns via the GND (ref) electrode</text>
 
   <!-- shielded cable: grey jacket = shielded -->
   <path d="M345,238 C345,300 350,300 355,360" stroke="#8b969d" stroke-width="10" fill="none" stroke-linecap="round"/>
@@ -58,8 +58,8 @@
   <circle cx="430" cy="560" r="34" fill="#3a78ad" stroke="#fff" stroke-width="2"/>
   <text x="430" y="556" text-anchor="middle" font-size="13" font-weight="700" fill="#fff">W104</text>
   <text x="430" y="574" text-anchor="middle" font-size="11" fill="#cfe3f5">gain</text>
-  <text x="560" y="556" font-size="12" fill="#cfe3f5">offset → baseline ~1.6 V</text>
-  <text x="560" y="574" font-size="12" fill="#cfe3f5">(keep positive!)</text>
+  <text x="485" y="556" font-size="12" fill="#cfe3f5">offset → baseline ~1.6 V</text>
+  <text x="485" y="574" font-size="12" fill="#cfe3f5">(keep positive!)</text>
 
   <!-- J3 output row -->
   <text x="180" y="650" font-size="13" font-weight="700" fill="#cfe3f5">J3 — OUTPUT SIDE</text>
@@ -69,7 +69,7 @@
     <rect x="390" y="660" width="90" height="34" rx="6" fill="#fff"/><text x="435" y="682" text-anchor="middle" fill="#333">GND</text>
     <rect x="490" y="660" width="100" height="34" rx="6" fill="#ffe3de" stroke="#c0392b" stroke-width="2"/><text x="540" y="682" text-anchor="middle" fill="#c0392b">V−</text>
   </g>
-  <text x="540" y="720" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">✕ LEAVE OPEN — grounding kills the board</text>
+  <rect x="360" y="705" width="300" height="24" rx="12" fill="#fff" stroke="#c0392b" stroke-width="1.5"/><text x="510" y="721" text-anchor="middle" font-size="12" font-weight="700" fill="#c0392b">✕ V− LEAVE OPEN — grounding kills the board</text>
 
   <!-- Vout -> resistor -> ADS -->
   <path d="M330,694 L330,835" stroke="#1a8a4a" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
@@ -88,14 +88,16 @@
     <rect x="450" y="895" width="80" height="32" rx="6" fill="#fff"/><text x="490" y="916" text-anchor="middle" fill="#2d6fb3">SCL</text>
     <rect x="540" y="895" width="80" height="32" rx="6" fill="#fff"/><text x="580" y="916" text-anchor="middle" fill="#2d6fb3">SDA</text>
   </g>
-  <text x="400" y="962" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffd7a8">VDD = 3.3 V  —  NEVER 5 V (generic board, no level shift)</text>
-  <text x="220" y="962" text-anchor="middle" font-size="11.5" fill="#e6d5f5">ads.gain = 1</text>
+  <text x="690" y="872" text-anchor="end" font-size="11.5" fill="#e6d5f5">ads.gain = 1</text>
 
   <!-- ADS -> Pi lines -->
   <path d="M310,927 L310,1120" stroke="#333" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
   <path d="M400,927 L400,1120" stroke="#e07b1a" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
   <path d="M490,927 L490,1120" stroke="#2d6fb3" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
   <path d="M580,927 L580,1120" stroke="#2d6fb3" stroke-width="2.5" fill="none" marker-end="url(#arrow)"/>
+
+  <rect x="200" y="946" width="400" height="24" rx="12" fill="#5e2f8a" stroke="#ffd7a8" stroke-width="1"/>
+  <text x="400" y="963" text-anchor="middle" font-size="12.5" font-weight="700" fill="#ffd7a8">VDD = 3.3 V  —  NEVER 5 V (generic board, no level shift)</text>
 
   <text x="70" y="1090" font-size="13" font-weight="700" fill="#8b969d" transform="rotate(-90 70 1090)">all links below = jumper wires</text>
 
@@ -116,7 +118,7 @@
 
   <!-- 5V feed callout to AD620 VCC -->
   <path d="M625,1180 C700,1000 720,600 590,470" stroke="#c0392b" stroke-width="2" fill="none" stroke-dasharray="6 5" marker-end="url(#arrowR)"/>
-  <text x="742" y="820" font-size="11.5" fill="#c0392b" transform="rotate(90 742 820)">5 V → AD620 VCC</text>
+  <text x="752" y="600" font-size="11.5" fill="#c0392b" transform="rotate(90 752 600)">5 V → AD620 VCC</text>
 
   <!-- ===== MCP4725 stimulation path ===== -->
   <rect x="760" y="840" width="335" height="150" rx="12" fill="#12857f" stroke="#0c5a56" stroke-width="2"/>
